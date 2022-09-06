@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant&family=Gilda+Display&family=Poppins&family=Sarala&display=swap');
+
+/*     font-family: 'Assistant', sans-serif;
+
+    
+
+    
+
+     */
+
+body{
+  padding: 20px;
+}
+
+.flex{
+  display: flex;
+}
+
+.clmn{
+  flex-direction: column;
+}
+
+.aic{
+  align-items: center;
+}
+
+.jcsb{
+  justify-content: space-between;
+}
+
+.asfe{
+  align-self: flex-end;
+}
+
+.wrap{
+  flex-wrap: wrap;
+}
+
+.g-30{
+  gap: 30px;
+}
+
+a, button{
+  color: rgba(255, 255, 255, 0.486);
+  text-decoration: none;
+}
+
+a:hover, button:hover{
+  color: white;
+  text-decoration: 2px underline #fc7986;
+  cursor: pointer;
+}
+
+button{
+  background: none;
+  border: 1px solid #fc7986;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+button:disabled{
+  opacity: 0;
+  cursor:auto;
+}
+
+.w-280{
+  width: 280px;
+}
+
+.w100-100{
+  width: 100%;
+}
+
+.w100-50{
+  width: 50%;
+}
+
+.p-10{
+  padding: 10px;
+}
+
+.m-t-10{
+  margin-top: 10px;
+}
+
+.b{
+  border: 2px solid #fc79864f ;
+}
+
+.b-b{
+  border-bottom: 2px solid #fc79864f ;
+}
+
+h1,h2{
+  font-family: 'Gilda Display', serif;
+  color: #966363;
+}
+
+h1{
+  font-size: 50px;
+  margin: 10px 0 0;
+
+}
+
+h2{
+  margin: 0;
+}
+
+h3{
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+
+p{
+  font-family: 'Sarala', sans-serif;
+  font-size: 16px;
+}
+
