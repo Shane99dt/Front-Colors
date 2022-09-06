@@ -5,8 +5,8 @@ const Nav = () =>{
         <header>
             <nav className="flex g-30 p-10 b-b">
                 <Link to={'/'}>Home</Link>
-                <Link to={'/Articles'}>Articles</Link>
-                <Link to={'/Panier'}>Panier</Link>
+                <Link to={'/Articles'}>Shop</Link>
+                <Link to={'/Panier'}>Cart(1)</Link>
 
             </nav>
         </header>
