@@ -3,8 +3,10 @@
 
 /*     font-family: 'Assistant', sans-serif; */
 
-body{
-  padding: 20px;
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
 }
 
 .flex{
@@ -35,48 +37,7 @@ body{
   gap: 30px;
 }
 
-a, button{
-  color: rgba(0, 0, 0, 0.5);
-  text-decoration: none;
-}
 
-a:hover, button:hover{
-  color: black;
-  text-decoration: 2px underline #fc7986;
-  cursor: pointer;
-}
-
-button{
-  background: none;
-  border: 1px solid #fc7986;
-  padding: 10px;
-  border-radius: 50px;
-}
-
-button:disabled{
-  opacity: 0;
-  cursor:auto;
-}
-
-.w-280{
-  width: 280px;
-}
-
-.w100-100{
-  width: 100%;
-}
-
-.w100-50{
-  width: 50%;
-}
-
-.p-10{
-  padding: 10px;
-}
-
-.m-t-10{
-  margin-top: 10px;
-}
 
 .b{
   border: 2px solid #fc79864f ;
@@ -86,9 +47,35 @@ button:disabled{
   border-bottom: 2px solid #fc79864f ;
 }
 
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 100px;
+}
+.home-link{
+  color: #966363;
+  font-family: 'Gilda Display', serif;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 24px;
+}
+.navbar div{
+  display: flex;
+  gap: 50px;
+}
+
+.navbar div a{
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
 h1,h2{
   font-family: 'Gilda Display', serif;
   color: #966363;
+  font-weight: 400;
 }
 
 h1{
@@ -104,6 +91,7 @@ h2{
 h3{
   font-family: 'Poppins', sans-serif;
   color: black;
+  font-weight: 400;
 }
 
 p{
@@ -111,3 +99,6 @@ p{
   font-size: 16px;
 }
 
+.home-container{
+  border: red solid 2px;
+}
