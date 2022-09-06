@@ -50,7 +50,9 @@
 .navbar{
   display: flex;
   justify-content: space-between;
-  padding: 30px 100px;
+  align-items: center;
+  padding: 0px 100px;
+  height: 12vh;
 }
 .home-link{
   color: #966363;
@@ -100,5 +102,42 @@ p{
 }
 
 .home-container{
-  border: red solid 2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88vh;
+}
+
+.home-container article{
+  margin-left: 10%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.home-container h1{
+  align-self: center;
+  font-size: 120px;
+  padding: 0% 100px;
+}
+.home-container h3{
+  align-self: flex-end;
+  font-size: 30px;
+}
+.home-images{
+  position: absolute;
+  height: 100%;
+  width: 45%;
+  left: 0%;
+  display: flex;
+  justify-content:space-around;
+}
+.home-images div{
+  border: red 2px solid;
+  height: 90%;
+  width: 45%;
+}
+.bg-2{
+  align-self: flex-end;
 }
