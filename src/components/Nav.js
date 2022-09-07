@@ -1,22 +1,21 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
+// import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 
-const Nav = () => {
+const Nav = ({length}) => {
 
-  const [cartQuantity,setCartQuantity] = useState(0)
+//   const [cartQuantity,setCartQuantity] =useState(0)
 
-  const Count = () =>{
-    let test
-    const localArticlesIds= localStorage.getItem("articlesID")
-    if(localArticlesIds){
-      setCartQuantity(JSON.parse(test).length )
-    }
-     
-  }
+//   useEffect(() => {
+//     Count()
+// }, []);
 
-  useEffect(()=>{
-    Count()
-  },[])
+//   const Count = ()=>{
+//     if (localStorage.articlesID){
+//     setCartQuantity(JSON.parse(localStorage.getItem("articlesID")).length)
+//     }
+//   }
 
   return (
     <header>
@@ -24,7 +23,7 @@ const Nav = () => {
         <Link className="home-link" to={"/"}>COLORS.</Link>
         <div>
         <Link to={"/Articles"}>Shop</Link>
-        <Link to={"/Panier"}>Cart({cartQuantity})</Link>
+        <Link to={"/Panier"}>Cart({length})</Link>
         </div>
       </nav>
     </header>

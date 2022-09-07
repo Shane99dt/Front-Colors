@@ -7,12 +7,12 @@ import Article from "./pages/Article";
 import Panier from "./pages/Panier";
 import Commandes from "./pages/Commandes";
 import NotFound from "./pages/NotFound";
-import Header from "./components/Header";
+// import Header from "./components/Header";
 
 function App() {
   return (
     <BrowserRouter>
-      <Header/>
+      {/* <Header/> */}
       <Routes>
 
           <Route path="/" element={<Home/>}/>

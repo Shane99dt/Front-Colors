@@ -1,8 +1,8 @@
 import Nav from "./Nav"
 
-const Header = () => {
+const Header = ({length}) => {
     return <>
-        <Nav/>
+        <Nav length={length}/>
     </>
 }
 
