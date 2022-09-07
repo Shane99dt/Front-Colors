@@ -237,6 +237,8 @@ p{
 }
 
 .panier-container{
+  margin-top: 50px;
+  margin-left: 50px;
   border: red solid 2px;
   height: 40vh;
   margin-bottom: 40px;
@@ -247,9 +249,18 @@ p{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 10px;
   gap: 10px;
 }
 
 .panier-container h3{
   text-transform: uppercase;
+}
+
+.panier-container p{
+  width: 80%;
+}
+
+.panier-container button{
+  width: 80%;
 }
