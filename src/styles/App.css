@@ -328,3 +328,10 @@ p{
     font-size: 70px;
     margin-left: 50px;
 }
+
+.selectTri{
+  margin-bottom: 50px;
+  background: #966363;
+  color: white;
+  height: 30px;
+}

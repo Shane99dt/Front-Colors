@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Button from "../components/Button";
 import Card from "../components/Card";
+import Select from "../components/Select";
+
 const Categorie = () => {
   const [products, setProduct] = useState([]);
   const [categories, setCatergories] = useState([]);
@@ -76,13 +78,13 @@ const Categorie = () => {
           );
         })}
       </div>
-      <select onChange={Orderby}>
-
-        <option value="">Ne pas trier</option>
-        <option value="ASC">Trier par prix croissant</option>
-        <option value="DESC">Trier par prix décroissant</option>
-
-      </select>
+      <div className="flex center">
+        <Select
+          options={[{value: "", text: "Ne pas trier"},{value: "ASC", text: "Trier par prix croissant"},{value: "DESC", text: "Trier par prix décroissant"}]}
+          value=""
+          handleChange={Orderby}
+          />
+      </div>
       <section className="articles-container">
         {products.map((product) => {
           return (
