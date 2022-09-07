@@ -2,6 +2,7 @@ import H1 from "../components/H1";
 import Button from "../components/Button";
 import Header from "../components/Header";
 import CompleteCard from "../components/CompleteCard";
+import H2 from "../components/H2";
 
 import { useState, useEffect } from "react";
 
@@ -53,6 +54,8 @@ const Panier = () => {
     <section className="cart-container">
       <Header length={cartQuantity} />
       <H1>Cart</H1>
+    <div className="cart">
+    <div className="cart-list">
       {articles.map((article) => {
         return (
           <CompleteCard
@@ -63,11 +66,16 @@ const Panier = () => {
             description={article.description}
             owner={article.productOwner}
             handleClick={() => handleRemoveClick(article.id)}
-            text="Remove to Cart"
+            text="Remove from Cart"
             className={"panier-container"}
           />
         );
       })}
+      </div>
+    <div className="total">
+      <H2>TOTAL :</H2>
+    </div>
+    </div>
     </section>
   );
 };
