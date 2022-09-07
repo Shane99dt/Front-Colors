@@ -52,7 +52,7 @@
         width: 300px;
     }
 
-    .panier-container{
+    .commande-container{
       height: 100%;
     }
 
@@ -64,7 +64,7 @@
       font-size: 30px;
     }
 
-    .panier-container img{
+    .commande-container img{
       width: 300px;
     }
 }
@@ -79,7 +79,7 @@
     font-size: 20px;
   }
 
-  .panier-container{
+  .commande-container{
     flex-direction: column;
   }
 }
