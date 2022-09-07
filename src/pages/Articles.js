@@ -44,14 +44,14 @@ const Articles = () => {
       <H1>SHOP</H1>
     </div>
     <section className="articles-container">
-        {/* {products.map((product) => {
+        {products.map((product) => {
             return(
                 <Card 
-                image={''} 
-                title={''} 
-                price={''} />
+                image={'https://i.postimg.cc/HshMxf8m/Rectangle-43.png'} 
+                title={product.productName} 
+                price={product.price} />
             )
-        })} */}
+        })}
     </section>
     </>
   );
