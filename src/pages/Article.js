@@ -18,13 +18,13 @@ const Article = () =>{
     const [product,setProduct] = useState(null)
 
     const fetchProducts = async () => {
-        const request = await fetch(`https://e-commerce-fantastic4.herokuapp.com/products${id}`)
+        const request = await fetch(`https://e-commerce-fantastic4.herokuapp.com/products/${id}`)
         const response = await request.json()
         setProduct(response)
         console.log(response)
     }
 
-    const handleAddClick = () =>{
+    const handleAddClick = (id) =>{
         let Ids
     
         if (localStorage.articlesID){
@@ -34,7 +34,7 @@ const Article = () =>{
            Ids=[]
         }
 
-        Ids.push(1)
+        Ids.push(id)
 
         const stringifiedArticlesIds = JSON.stringify(Ids)
         localStorage.setItem('articlesID', stringifiedArticlesIds)
@@ -45,11 +45,14 @@ const Article = () =>{
     return <>
         <Header length={cartQuantity}/>
         <H1>Article</H1>
-        {product && <CompleteCard image={product.productImage} 
-                title={product.productName} 
-                price={product.price}
-                description={product.description}
-                handleClick={handleAddClick} />}
+        {product ? <CompleteCard 
+            image={product.productImage} 
+            title={product.productName} 
+            price={product.price}
+            description={product.description}
+            owner={product.productOwner}
+            handleClick={()=>handleAddClick(product.id)}
+             /> : <p>article</p>}
     </>
 }
 
