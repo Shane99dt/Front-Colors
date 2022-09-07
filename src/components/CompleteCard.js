@@ -2,7 +2,7 @@ import H3 from "./H3"
 import H4 from "./H4"
 import Button from "./Button"
 
-const CompleteCard = ({image,title,price,description,handleClick,owner}) =>{
+const CompleteCard = ({image,title,price,description,handleClick,owner,text}) =>{
 
     return ( 
     <article className="flex">
@@ -13,7 +13,7 @@ const CompleteCard = ({image,title,price,description,handleClick,owner}) =>{
             <H4>{price/100}$</H4>
             <small>{owner}</small>
             <p>{description}</p>
-            <Button handleClick={handleClick} text="Add to Cart"/>
+            <Button handleClick={handleClick} text={text}/>
         </div>
 
     </article>

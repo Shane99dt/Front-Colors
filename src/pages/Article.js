@@ -52,7 +52,7 @@ const Article = () =>{
             description={product.description}
             owner={product.productOwner}
             handleClick={()=>handleAddClick(product.id)}
-             /> : <p>article</p>}
+            text="Add to Cart" /> : <p>article</p>}
     </>
 }
 
