@@ -52,6 +52,26 @@
   border-bottom: 2px solid #fc79864f ;
 }
 
+button{
+  background: #966363;
+  border: none;
+  border-radius: none;
+  font-family: 'Gilda Display', serif;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.category-button{
+  width: 100%;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 .navbar{
   display: flex;
   justify-content: space-between;
