@@ -6,7 +6,7 @@ import { useState } from "react"
 
 const Article = () =>{
 
-    const [cartQuantity,setCartQuantity] = useState(0)
+    const [cartQuantity,setCartQuantity] = useState(localStorage.articlesID ? JSON.parse(localStorage.getItem("articlesID")).length : 0)
 
     const handleAddClick = () =>{
         let Ids
@@ -29,7 +29,7 @@ const Article = () =>{
     return <>
         <Header length={cartQuantity}/>
         <H1>Article</H1>
-        <Button handleClick={handleAddClick} text="Test"/>
+        <Button handleClick={handleAddClick} text="Add to Cart"/>
     </>
 }
 
