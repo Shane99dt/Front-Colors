@@ -46,7 +46,7 @@ const Articles = () => {
     <section className="articles-container">
         {products.map((product) => {
             return(
-                <Card 
+                <Card key={product.productName}
                 image={'https://i.postimg.cc/HshMxf8m/Rectangle-43.png'} 
                 title={product.productName} 
                 price={product.price} />
