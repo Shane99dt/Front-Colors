@@ -183,7 +183,8 @@ p{
 
 .articles-container{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 5%;
   flex-wrap: wrap;
   width: 100%;
 }

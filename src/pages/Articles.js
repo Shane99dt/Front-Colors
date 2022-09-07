@@ -26,7 +26,6 @@ const Articles = () => {
     );
     const response = await request.json();
     setProduct(response);
-    console.log(response);
   };
 
   const fetchCategories = async () => {
@@ -35,7 +34,6 @@ const Articles = () => {
     );
     const response = await request.json();
     setCatergories(response);
-    console.log(response);
   };
 
   return (
