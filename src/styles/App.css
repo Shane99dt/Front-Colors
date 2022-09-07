@@ -235,3 +235,21 @@ p{
   font-size: 30px;
   text-align: end;
 }
+
+.panier-container{
+  border: red solid 2px;
+  height: 40vh;
+  margin-bottom: 40px;
+  width: 50%;
+}
+
+.panier-container div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.panier-container h3{
+  text-transform: uppercase;
+}
