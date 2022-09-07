@@ -68,6 +68,7 @@ const Panier = () => {
             handleClick={() => handleRemoveClick(article.id)}
             text="Remove from Cart"
             className={"panier-container"}
+            button
           />
         );
       })}

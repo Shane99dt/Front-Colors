@@ -11,6 +11,7 @@ const CompleteCard = ({
   owner,
   text,
   className,
+  button
 }) => {
   return (
     <article className={`flex ${className}`}>
@@ -20,7 +21,7 @@ const CompleteCard = ({
         <H4>{price / 100}$</H4>
         <small>{owner}</small>
         <p>{description}</p>
-        <Button handleClick={handleClick} text={text} />
+        {button && <Button handleClick={handleClick} text={text} />}
       </div>
     </article>
   );

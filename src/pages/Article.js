@@ -53,6 +53,7 @@ const Article = () =>{
             handleClick={()=>handleAddClick(product.id)}
             text="Add to Cart"
             className="Article-container jcc"
+            button
             />
              : <p>article</p>}
     </>
