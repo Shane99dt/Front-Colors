@@ -1,6 +1,7 @@
 import H1 from "../components/H1"
 import Header from "../components/Header"
-import H2 from "../components/H2"
+import H3 from "../components/H3"
+import H4 from "../components/H4"
 import Button from "../components/Button"
 import CompleteCard from "../components/CompleteCard"
 
@@ -10,14 +11,14 @@ import { useNavigate } from "react-router-dom"
 const Commandes = () =>{
 
     const [articles,setArticles] = useState([])
+    const [totalPrice,setTotalPrice] = useState(0)
 
     const navigate = useNavigate()
 
     const handleBackClick = () =>{
+        localStorage.setItem('articlesID', '')
         navigate('/')
     }
-
-
 
     useEffect(() => {
         let Ids;
@@ -27,6 +28,14 @@ const Commandes = () =>{
           fetchPanier(Ids);
         }
       }, []);
+
+      useEffect(()=>{
+        let totalprice=0
+        articles.forEach(article=>{
+            totalprice += article.price
+        })
+        setTotalPrice(totalprice/100);
+      },[articles])
     
       const fetchPanier = async (Ids) => {
         const promises = Ids.map((Id) => {
@@ -43,16 +52,14 @@ const Commandes = () =>{
         const response = await request.json();
         return response;
       };
-    
-
-
-
-
+   
     return <>
         <Header length={localStorage.articlesID ? JSON.parse(localStorage.getItem("articlesID")).length : 0}/>
-        <H1>MERCI POUR VOTRE ACHAT!</H1>
-        <H2>Récapitulatif de votre commande</H2>
-        <div className="cart-list">
+        <div className="commandetitle-container">
+            <H1>MERCI POUR VOTRE ACHAT!</H1>
+            <H3>Récapitulatif de votre commande</H3>
+        </div>
+        <div className="jcc">
             {articles.map((article) => {
                 return (
                 <CompleteCard
@@ -62,12 +69,18 @@ const Commandes = () =>{
                     price={article.price}
                     description={article.description}
                     owner={article.productOwner}
-                    className={"panier-container"}
+                    className={"panier-container commande-container jcc"}
                 />
                 );
             })}
          </div>
-        <Button text={"Retour"} handleClick={handleBackClick}/>
+         <div className="flex center totalprice">
+            <H4>Total:{totalPrice}$</H4>
+         </div>
+
+        <div className="flex jce retourbutton">
+            <Button text={"Retour"} handleClick={handleBackClick}/>
+        </div>
     </>
 }
 

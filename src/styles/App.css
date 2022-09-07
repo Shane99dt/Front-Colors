@@ -29,6 +29,10 @@
   justify-content: space-between;
 }
 
+.jce{
+  justify-content: flex-end;
+}
+
 .asfe{
   align-self: flex-end;
 }
@@ -334,4 +338,28 @@ p{
   background: #966363;
   color: white;
   height: 30px;
+}
+
+.commandetitle-container{
+  text-align: center;
+}
+
+.commandetitle-container h1{
+  font-size: 100px;
+}
+
+.commandetitle-container h3{
+  font-size: 50px;
+}
+
+.commande-container div{
+  width: 50%;
+}
+
+.totalprice{
+  font-size: 24px;
+}
+
+.retourbutton{
+  margin: 16px;
 }

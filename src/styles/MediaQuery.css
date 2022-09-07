@@ -51,4 +51,35 @@
     .Article-container img{
         width: 300px;
     }
+
+    .panier-container{
+      height: 100%;
+    }
+
+    .commandetitle-container h1{
+      font-size: 50px;
+    }
+    
+    .commandetitle-container h3{
+      font-size: 30px;
+    }
+
+    .panier-container img{
+      width: 300px;
+    }
+}
+
+@media (max-width: 550px){
+
+  .commandetitle-container h1{
+    font-size: 30px;
+  }
+  
+  .commandetitle-container h3{
+    font-size: 20px;
+  }
+
+  .panier-container{
+    flex-direction: column;
+  }
 }
