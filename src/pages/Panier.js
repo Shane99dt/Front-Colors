@@ -64,6 +64,7 @@ const Panier = () => {
             owner={article.productOwner}
             handleClick={() => handleRemoveClick(article.id)}
             text="Remove to Cart"
+            className={"panier-container"}
           />
         );
       })}
