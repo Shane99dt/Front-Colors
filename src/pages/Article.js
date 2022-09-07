@@ -29,7 +29,7 @@ const Article = () =>{
     return <>
         <Header length={cartQuantity}/>
         <H1>Article</H1>
-        <Button handleClick={handleAddClick} text="Test"/>
+        <Button handleClick={handleAddClick} text="Add to Cart"/>
     </>
 }
 
