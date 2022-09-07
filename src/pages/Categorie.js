@@ -17,7 +17,7 @@ const Categorie = () => {
   }, [params]);
 
   const handleNavigate = (id) => {
-    navigate(`/Articles/${id}`);
+    navigate(`${id}`);
   };
 
   const fetchProducts = async () => {
