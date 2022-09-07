@@ -12,7 +12,7 @@ const CompleteCard = ({image,title,price,description,handleClick}) =>{
             <H3>{title}</H3>
             <H4>{price}</H4>
             <p>{description}</p>
-            <Button text="ADD TO CART" handleClick={handleClick}/>
+            <Button handleClick={handleClick} text="Add to Cart"/>
         </div>
 
     </article>
