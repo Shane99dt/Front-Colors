@@ -154,6 +154,7 @@ p{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .card img{
@@ -168,6 +169,7 @@ p{
 }
 
 .card h3{
+  text-transform: uppercase;
   margin-top: 20px;
   font-size: 22px;
 }

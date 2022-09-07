@@ -9,9 +9,15 @@ const Articles = () => {
     const [products, setProduct] = useState([])
     const [categories, setCatergories] = useState([])
 
+    const navigate = useNavigate()
+
     useEffect(() => {
         fetchProducts()
     }, [])
+
+    const handleNavigate = (id) => {
+        navigate(`${id}`)
+    }
 
     const fetchProducts = async () => {
         const request = await fetch('https://e-commerce-fantastic4.herokuapp.com/products')
@@ -30,9 +36,12 @@ const Articles = () => {
         {products.map((product) => {
             return(
                 <Card key={product.productName}
-                image={'https://i.postimg.cc/HshMxf8m/Rectangle-43.png'} 
+                image={product.productImage} 
                 title={product.productName} 
-                price={`${product.price / 100}$`} />
+                price={`${product.price / 100}$`}
+                onclick={()=> handleNavigate(product.id)}
+                />
+                
             )
         })}
     </section>
