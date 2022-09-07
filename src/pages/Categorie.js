@@ -20,10 +20,17 @@ const Categorie = () => {
     navigate(`${id}`);
   };
 
-  const fetchProducts = async () => {
-    const request = await fetch(
-      `https://e-commerce-fantastic4.herokuapp.com/category/${params.id}`
-    );
+  const fetchProducts = async (trie) => {
+    let request
+    if (trie){
+    request = await fetch(
+        `https://e-commerce-fantastic4.herokuapp.com/category/${params.id}?price=${trie}`
+      );
+    }else{
+    request = await fetch(
+        `https://e-commerce-fantastic4.herokuapp.com/category/${params.id}`
+      );
+    }
     const response = await request.json();
     setProduct(response.Products);
   };
@@ -35,6 +42,15 @@ const Categorie = () => {
     const response = await request.json();
     setCatergories(response);
   };
+
+  const Orderby = e =>{
+    if(e){
+      fetchProducts(e.target.value)
+    }else{
+      fetchProducts()
+
+    }
+  }
 
   return (
     <>
@@ -60,6 +76,13 @@ const Categorie = () => {
           );
         })}
       </div>
+      <select onChange={Orderby}>
+
+        <option value="">Ne pas trier</option>
+        <option value="ASC">Trier par prix croissant</option>
+        <option value="DESC">Trier par prix décroissant</option>
+
+      </select>
       <section className="articles-container">
         {products.map((product) => {
           return (
