@@ -2,6 +2,7 @@ import H1 from "../components/H1";
 import Header from "../components/Header"
 import Card from "../components/Card";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Articles = () => {
 
@@ -49,7 +50,7 @@ const Articles = () => {
                 <Card key={product.productName}
                 image={'https://i.postimg.cc/HshMxf8m/Rectangle-43.png'} 
                 title={product.productName} 
-                price={product.price} />
+                price={`${product.price / 100}$`} />
             )
         })}
     </section>
