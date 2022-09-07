@@ -44,7 +44,6 @@ const Article = () =>{
 
     return <>
         <Header length={cartQuantity}/>
-        <H1>Article</H1>
         {product ? <CompleteCard 
             image={product.productImage} 
             title={product.productName} 
@@ -52,7 +51,10 @@ const Article = () =>{
             description={product.description}
             owner={product.productOwner}
             handleClick={()=>handleAddClick(product.id)}
-            text="Add to Cart" /> : <p>article</p>}
+            text="Add to Cart"
+            className="Article-container jcc"
+            />
+             : <p>article</p>}
     </>
 }
 

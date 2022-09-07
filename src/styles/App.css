@@ -21,6 +21,10 @@
   align-items: center;
 }
 
+.jcc{
+  justify-content: center;
+}
+
 .jcsb{
   justify-content: space-between;
 }
@@ -234,6 +238,40 @@ p{
 .notFound-container h3{
   font-size: 30px;
   text-align: end;
+}
+
+.notfound-section{
+  height: 80vh;
+}
+
+.Article-container{
+  margin-top: 60px;
+  gap: 70px;
+}
+
+.Article-container h2{
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+.Article-container h4{
+  font-size: 50px;
+  font-weight: normal;
+}
+
+.Article-container small{
+  font-size: 20px;
+}
+
+.Article-container div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+}
+
+.Article-container img{
+  width: 40%;
 }
 
 .panier-container{
