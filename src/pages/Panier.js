@@ -63,7 +63,7 @@ const Panier = () => {
             description={article.description}
             owner={article.productOwner}
             handleClick={() => handleRemoveClick(article.id)}
-            text="Remove to Cart"
+            text="Remove from Cart"
             className={"panier-container"}
           />
         );
