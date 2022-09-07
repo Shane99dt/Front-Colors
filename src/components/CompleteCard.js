@@ -1,4 +1,4 @@
-import H3 from "./H3";
+import H2 from "./H2";
 import H4 from "./H4";
 import Button from "./Button";
 
@@ -16,7 +16,7 @@ const CompleteCard = ({
     <article className={`flex ${className}`}>
       <img src={image} alt={title} />
       <div>
-        <H3>{title}</H3>
+        <H2>{title}</H2>
         <H4>{price / 100}$</H4>
         <small>{owner}</small>
         <p>{description}</p>
