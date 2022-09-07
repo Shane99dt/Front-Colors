@@ -14,18 +14,18 @@ const Categorie = () => {
   useEffect(() => {
     fetchProducts();
     fetchCategories();
-  }, []);
+  }, [params]);
 
   const handleNavigate = (id) => {
-    navigate(`${id}`);
+    navigate(id);
   };
 
   const fetchProducts = async () => {
     const request = await fetch(
-      `https://e-commerce-fantastic4.herokuapp.com/category/${params.id}/products`
+      `https://e-commerce-fantastic4.herokuapp.com/category/${params.id}`
     );
     const response = await request.json();
-    setProduct(response);
+    setProduct(response.Products);
   };
 
   const fetchCategories = async () => {
@@ -49,7 +49,7 @@ const Categorie = () => {
         <H1>SHOP</H1>
       </div>
       <div className="category-button">
-        <Button text={"ALL"} handleClick={() => handleNavigate("Articles")} />
+        <Button text={"ALL"} handleClick={() => handleNavigate("/Articles")} />
         {categories.map((category) => {
           return (
             <Button
