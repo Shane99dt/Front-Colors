@@ -7,7 +7,6 @@ const Articles = () => {
 
     const [products, setProduct] = useState([])
     const [categories, setCatergories] = useState([])
-    const [cartQuantity,setCartQuantity] = useState(localStorage.articlesID ? JSON.parse(localStorage.getItem("articlesID")).length : 0)
 
     useEffect(() => {
         fetchProducts()
@@ -20,26 +19,9 @@ const Articles = () => {
         console.log(response)
     }
 
-    const handleAddClick = () =>{
-        let Ids
-    
-        if (localStorage.articlesID){
-            const localArticlesIds= localStorage.getItem("articlesID")
-            Ids = JSON.parse(localArticlesIds)
-        }else{
-           Ids=[]
-        }
-
-        Ids.push()
-
-        const stringifiedArticlesIds = JSON.stringify(Ids)
-        localStorage.setItem('articlesID', stringifiedArticlesIds)
-        setCartQuantity(Ids.length)
-    }
-
   return (
     <>
-    <Header length={cartQuantity}/>
+    <Header length={localStorage.articlesID ? JSON.parse(localStorage.getItem("articlesID")).length : 0}/>
     <div className="title-container">
       <H1>SHOP</H1>
     </div>
