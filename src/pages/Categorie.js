@@ -91,7 +91,7 @@ const Categorie = () => {
               image={product.productImage}
               title={product.productName}
               price={`${product.price / 100}$`}
-              onclick={() => handleNavigate(product.id)}
+              onclick={() => handleNavigate(`/Articles/${product.id}`)}
             />
           );
         })}
