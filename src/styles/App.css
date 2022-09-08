@@ -428,6 +428,16 @@ p{
   margin-top: 20px;
 }
 
+button:disabled{
+  background: lightgray;
+  color: #966363;
+  opacity: 0.5;
+}
+
+button:disabled:hover{
+  cursor:not-allowed;
+}
+
 /* KEYFRAMES */
 
 
