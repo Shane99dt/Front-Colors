@@ -286,7 +286,7 @@ p{
 
 .Article-container p{
   text-transform: capitalize;
-  
+
 }
 
 .Article-container div{
@@ -390,6 +390,28 @@ p{
   margin: 16px;
 }
 
+.load-1{
+  transition: 0.5s;
+  animation: loading 1s 1s infinite; 
+}
+.load-2{
+  transition: 0.5s;
+  animation: loading 2s 1s infinite; 
+}
+.load-3{
+  transition: 0.5s;
+  animation: loading 3s 1s infinite; 
+}
+.loading{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+
 /* KEYFRAMES */
 
 
@@ -400,5 +422,14 @@ p{
   }
 
 }
+@keyframes loading {
+  50%{
+    padding-bottom: 20px;
+  }
+  100%{
+    padding-bottom: 0px;
+  }
+}
+
 
 
