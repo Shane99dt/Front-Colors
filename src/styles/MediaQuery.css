@@ -134,7 +134,8 @@
 
 
   .title-container{
-    margin: 60px 30px;
+    margin: 40px 20px;
+    height: 30vh;
   }
   .home-container h3{
     align-self: center;
@@ -156,6 +157,9 @@
 }
 
 @media (max-width: 410px) {
+  .Article-container{
+    padding: 0PX 20px;
+  }
   .title-container h1{
     font-size: 70px;
   }
