@@ -371,6 +371,10 @@ p{
   font-size: 25px;
 }
 
+.commande-container{
+  margin-left: 0;
+}
+
 .commande-container div{
   width: 50%;
 }
