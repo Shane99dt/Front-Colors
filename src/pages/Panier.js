@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import H1 from "../components/H1";
 import Button from "../components/Button";
 import Header from "../components/Header";
