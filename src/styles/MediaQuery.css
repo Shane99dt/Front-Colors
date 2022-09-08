@@ -69,6 +69,16 @@
     }
 }
 
+@media (max-width: 780px) {
+  .home-container h1{
+    font-size: 70px;
+  }
+  
+  .home-images{
+    width: 70%;
+  }
+}
+
 @media (max-width: 550px){
 
   .commandetitle-container h1{
@@ -81,5 +91,18 @@
 
   .commande-container{
     flex-direction: column;
+  }
+
+  .home-container h1{
+    font-size: 50px;
+  }
+
+  .home-container h3{
+    align-self: center;
+  }
+  
+  .home-images{
+    width: 100%;
+    opacity: 0.7;
   }
 }
