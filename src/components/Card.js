@@ -4,8 +4,8 @@ const Card = ({ image, title, price, onclick }) => {
   return (
     <article className="card">
       <img onClick={onclick} src={image} alt={title} />
-      <H3>{title}</H3>
-      <h4>{price}</h4>
+      <H3 onClick={onclick}>{title}</H3>
+      <h4 onClick={onclick}>{price}</h4>
     </article>
   );
 };

@@ -189,11 +189,12 @@ p{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .card img{
   width: 100%;
+  cursor: pointer;
 }
 
 .articles-container{
@@ -206,8 +207,13 @@ p{
 
 .card h3{
   text-transform: uppercase;
-  margin-top: 20px;
+  margin-top: 5px;
   font-size: 22px;
+}
+.card h3:hover {
+  color: #966363;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .card h4{

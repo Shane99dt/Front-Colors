@@ -136,6 +136,11 @@
     opacity: 0.7;
   }
 
+
+  .home-images div{
+    height: 60%;
+  }
+
   .navbar{
   padding: 0px 20px;
   }
@@ -144,5 +149,9 @@
 @media (max-width: 410px) {
   .title-container h1{
     font-size: 90px;
+  }
+
+  .home-container h1{
+    padding: 0px 0px;
   }
 }
