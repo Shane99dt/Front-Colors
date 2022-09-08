@@ -80,7 +80,7 @@ const Articles = () => {
       </div>
       <div className="flex center">
         <Select
-          options={[{value: "", text: "Ne pas trier"},{value: "ASC", text: "Trier par prix croissant"},{value: "DESC", text: "Trier par prix décroissant"}]}
+          options={[{value: "", text: "do not sort"},{value: "ASC", text: "price, low to high"},{value: "DESC", text: "price, high to low"}]}
           value=""
           handleChange={Orderby}
           />
