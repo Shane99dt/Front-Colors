@@ -79,7 +79,7 @@ const Commandes = () => {
       </div>
 
       <div className="flex jce retourbutton">
-        <Button text={"Retour"} handleClick={handleBackClick} />
+        <Button text={"Back"} handleClick={handleBackClick} />
       </div>
     </>
   );
