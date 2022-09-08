@@ -50,8 +50,6 @@
   gap: 30px;
 }
 
-
-
 .b{
   border: 2px solid #fc79864f ;
 }
@@ -171,7 +169,7 @@ p{
   display: flex;
   justify-content:space-around;
   opacity: 0;
-  animation: apparition 2s 1.4s forwards; 
+  animation: apparition 1.5s 1s forwards; 
 }
 .home-images div{
   height: 90%;
@@ -235,6 +233,8 @@ p{
   display: flex;
   align-items: flex-end;
   padding: 30px;
+  opacity: 0;
+  animation: apparition 1s 0.3s forwards; 
 }
 
 .title-container h1{
@@ -264,6 +264,8 @@ p{
   margin-top: 60px;
   gap: 70px;
   margin-bottom: 60px;
+  opacity: 0;
+  animation: apparition 1.7s 0s forwards; 
 }
 
 .Article-container h2{
