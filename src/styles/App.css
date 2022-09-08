@@ -276,10 +276,17 @@ p{
 .Article-container h4{
   font-size: 70px;
   font-weight: normal;
+  text-transform: uppercase;
 }
 
 .Article-container small{
+  text-transform: capitalize;
   font-size: 20px;
+}
+
+.Article-container p{
+  text-transform: capitalize;
+  
 }
 
 .Article-container div{
