@@ -73,6 +73,11 @@ const Panier = () => {
     return response;
   };
 
+  const handleCheckoutClick = () =>{
+    // post à faire
+    handleNavigate("/Commandes")
+  }
+
   return (
     <section className="cart-container">
       <Header length={cartQuantity} />
@@ -98,7 +103,7 @@ const Panier = () => {
       </div>
     <div className="total">
       <H2>TOTAL : {totalPrice}$</H2>
-      <Button text={'CHECKOUT'} handleClick={() => handleNavigate('/Commandes')} />
+      <Button text={'CHECKOUT'} handleClick={handleCheckoutClick} />
     </div>
     </div>
     </section>
