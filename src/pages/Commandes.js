@@ -1,5 +1,4 @@
 import H1 from "../components/H1"
-import Header from "../components/Header"
 import H3 from "../components/H3"
 import H4 from "../components/H4"
 import Button from "../components/Button"
@@ -17,7 +16,7 @@ const Commandes = () =>{
 
     const handleBackClick = () =>{
         localStorage.setItem('articlesID', '')
-        navigate('/')
+        navigate('/Articles')
     }
 
     useEffect(() => {
@@ -54,7 +53,6 @@ const Commandes = () =>{
       };
    
     return <>
-        <Header length={localStorage.articlesID ? JSON.parse(localStorage.getItem("articlesID")).length : 0}/>
         <div className="commandetitle-container">
             <H1>MERCI POUR VOTRE ACHAT!</H1>
             <H3>Récapitulatif de votre commande</H3>
