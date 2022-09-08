@@ -110,6 +110,11 @@
 }
 
 @media (max-width: 550px){
+  .articles-container{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
 
   .commandetitle-container h1{
     font-size: 30px;
