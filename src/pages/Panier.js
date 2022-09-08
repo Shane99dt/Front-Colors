@@ -20,15 +20,15 @@ const Panier = () => {
       : 0
   );
   const [articles, setArticles] = useState([]);
-  const [totalPrice,setTotalPrice] = useState(0)
+  const [total,setTotal] = useState(0)
 
   
   useEffect(()=>{
-      let totalprice=0
+      let total=0
       articles.forEach(article=>{
-          totalprice += article.price
+          total += article.price
         })
-        setTotalPrice(totalprice/100);
+        setTotal(total/100);
     },[articles])
     
     const navigate = useNavigate();
@@ -73,16 +73,22 @@ const Panier = () => {
     return response;
   };
 
-  const handleCheckoutClick = () =>{
-    // post à faire
-    const articlesID = articles.map(article=>{
+  const handleCheckoutClick = async() =>{
+    const productsIds = articles.map(article=>{
       return article.id
     })
+    const commande = {
+      productsIds,
+      total
+    }
 
-    console.log(articlesID);
-    // const commande = {
-    //   articles,
-    // }
+    await fetch("https://e-commerce-fantastic4.herokuapp.com/orders",{
+      method: 'POST',
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(commande)
+    })
 
     handleNavigate("/Commandes")
   }
@@ -111,7 +117,7 @@ const Panier = () => {
       })}
       </div>
     <div className="total">
-      <H2>TOTAL : {totalPrice}$</H2>
+      <H2>TOTAL : {total}$</H2>
       <Button text={'CHECKOUT'} handleClick={handleCheckoutClick} />
     </div>
     </div>
