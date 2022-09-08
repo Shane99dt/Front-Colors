@@ -7,7 +7,7 @@ import CompleteCard from "../components/CompleteCard";
 import H2 from "../components/H2";
 import "../styles/MediaQuery.css";
 import { useNavigate } from "react-router-dom";
-import Loader from "../components/Loader"
+// import Loader from "../components/Loader"
 
 
 import { useState, useEffect } from "react";

@@ -2,6 +2,7 @@
 
 import Header from "../components/Header"
 import CompleteCard from "../components/CompleteCard"
+import Loader from "../components/Loader"
 
 import { useState,useEffect } from "react"
 import { useParams } from "react-router-dom"
@@ -11,7 +12,9 @@ const Article = () =>{
     const {id} = useParams()
 
     useEffect(()=>{
-        fetchProducts()
+        setTimeout(
+            fetchProducts
+        , 3000);
     },[])
 
     const [cartQuantity,setCartQuantity] = useState(localStorage.articlesID ? JSON.parse(localStorage.getItem("articlesID")).length : 0)
@@ -54,7 +57,7 @@ const Article = () =>{
             className="Article-container jcc"
             button
             />
-             : <p>article</p>}
+             : <Loader/>}
     </>
 }
 
