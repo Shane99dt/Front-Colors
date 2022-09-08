@@ -22,14 +22,13 @@ const Articles = () => {
   };
 
   const fetchProducts = async (trie) => {
-    let request
-    if(trie){
-       request = await fetch(
-      `https://e-commerce-fantastic4.herokuapp.com/products?price=${trie}`
-    );
-
-    }else{
-       request = await fetch(
+    let request;
+    if (trie) {
+      request = await fetch(
+        `https://e-commerce-fantastic4.herokuapp.com/products?price=${trie}`
+      );
+    } else {
+      request = await fetch(
         "https://e-commerce-fantastic4.herokuapp.com/products"
       );
     }
@@ -45,14 +44,13 @@ const Articles = () => {
     setCatergories(response);
   };
 
-  const Orderby = e =>{
-    if(e){
-      fetchProducts(e.target.value)
-    }else{
-      fetchProducts()
-
+  const Orderby = (e) => {
+    if (e) {
+      fetchProducts(e.target.value);
+    } else {
+      fetchProducts();
     }
-  }
+  };
 
   return (
     <>
@@ -67,7 +65,7 @@ const Articles = () => {
         <H1>SHOP</H1>
       </div>
       <div className="category-button">
-        <Button text={"ALL"} handleClick={() => handleNavigate("Articles")} />
+        <Button text={"ALL"} handleClick={() => handleNavigate("/Articles")} />
         {categories.map((category) => {
           return (
             <Button
@@ -75,15 +73,19 @@ const Articles = () => {
               text={category.categoryName}
               handleClick={() => handleNavigate(`/Category/${category.id}`)}
             />
-          )
+          );
         })}
       </div>
       <div className="flex center">
         <Select
-          options={[{value: "", text: "do not sort"},{value: "ASC", text: "price, low to high"},{value: "DESC", text: "price, high to low"}]}
+          options={[
+            { value: "", text: "do not sort" },
+            { value: "ASC", text: "price, low to high" },
+            { value: "DESC", text: "price, high to low" },
+          ]}
           value=""
           handleChange={Orderby}
-          />
+        />
       </div>
       <section className="articles-container">
         {products.map((product) => {
