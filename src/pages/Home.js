@@ -22,7 +22,7 @@ const Home = () => {
         <H1>COLORS.</H1>
         <H3>Drawing, Painting</H3>
         <div className="ButtonEnter">
-          <Button text="Enter to the shop" handleClick={handleEnterClick}/>
+          <Button text="Discover COLORS" handleClick={handleEnterClick}/>
         </div>
       </article>
       <aside className="home-images">
