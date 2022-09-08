@@ -438,6 +438,24 @@ button:disabled:hover{
   cursor:not-allowed;
 }
 
+.ConfirmText{
+  position: absolute;
+  top: 20%;
+  right: 0;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background: #966363;
+}
+
+.none{
+  opacity: 0;
+}
+
+.display{
+  opacity: 1;
+}
+
 /* KEYFRAMES */
 
 
