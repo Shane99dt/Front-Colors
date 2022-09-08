@@ -395,6 +395,11 @@ p{
   margin: 16px;
 }
 
+.ButtonEnter{
+  align-self: flex-end;
+  margin-top: 20px;
+}
+
 /* KEYFRAMES */
 
 
