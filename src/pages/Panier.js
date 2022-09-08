@@ -3,8 +3,13 @@ import Button from "../components/Button";
 import Header from "../components/Header";
 import CompleteCard from "../components/CompleteCard";
 import H2 from "../components/H2";
+import "../styles/MediaQuery.css";
+import { useNavigate } from "react-router-dom";
+
 
 import { useState, useEffect } from "react";
+
+
 
 const Panier = () => {
   const [cartQuantity, setCartQuantity] = useState(
@@ -13,6 +18,22 @@ const Panier = () => {
       : 0
   );
   const [articles, setArticles] = useState([]);
+  const [totalPrice,setTotalPrice] = useState(0)
+
+  
+  useEffect(()=>{
+      let totalprice=0
+      articles.forEach(article=>{
+          totalprice += article.price
+        })
+        setTotalPrice(totalprice/100);
+    },[articles])
+    
+    const navigate = useNavigate();
+
+    const handleNavigate = (id) => {
+        navigate(`${id}`);
+      };
 
   const handleRemoveClick = (id) => {
     const localArticlesIds = localStorage.getItem("articlesID");
@@ -74,7 +95,8 @@ const Panier = () => {
       })}
       </div>
     <div className="total">
-      <H2>TOTAL :</H2>
+      <H2>TOTAL : {totalPrice}$</H2>
+      <Button text={'Commander'} handleClick={() => handleNavigate('/Commandes')} />
     </div>
     </div>
     </section>

@@ -81,6 +81,8 @@ button{
 }
 
 .navbar{
+  position: relative;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -251,6 +253,7 @@ p{
 .Article-container{
   margin-top: 60px;
   gap: 70px;
+  margin-bottom: 60px;
 }
 
 .Article-container h2{
@@ -284,20 +287,24 @@ p{
 }
 
 .cart-list{
-  width: 50%;
+  width: 70%;
 }
 
 .total{
-  
-  width: 50%;
+  width: 30%;
   height: 100vh;
   position: fixed;
   top: 0;
   right: 0;
   display: flex;
-  align-items: center;
-  z-index: -1;
+  flex-direction: column;
+  z-index: 1;
   justify-content: center;
+}
+
+.total button{
+  margin-top: 10px;
+  width: 200px;
 }
 
 .panier-container{
@@ -325,7 +332,7 @@ p{
 }
 
 .panier-container button{
-  width: 80%;
+  width: 200px;
 }
 
 .cart-container h1{
