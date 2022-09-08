@@ -325,6 +325,7 @@ p{
   height: 40vh;
   margin-bottom: 40px;
   width: 100%;
+  gap: 50px;
 }
 
 .panier-container div{
