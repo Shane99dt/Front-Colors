@@ -79,9 +79,9 @@ const Articles = () => {
       <div className="flex center">
         <Select
           options={[
-            { value: "", text: "do not sort" },
-            { value: "ASC", text: "price, low to high" },
-            { value: "DESC", text: "price, high to low" },
+            { value: "", text: "Do not sort" },
+            { value: "ASC", text: "Price, low to high" },
+            { value: "DESC", text: "Price, high to low" },
           ]}
           value=""
           handleChange={Orderby}
