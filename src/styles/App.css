@@ -332,6 +332,7 @@ p{
   height: 40vh;
   margin-bottom: 40px;
   width: 100%;
+  gap: 50px;
 }
 
 .panier-container div{
@@ -378,6 +379,10 @@ p{
   font-size: 25px;
 }
 
+.commande-container{
+  margin-left: 0;
+}
+
 .commande-container div{
   width: 50%;
 }
@@ -411,6 +416,11 @@ p{
   transition: 0.5s;
 }
 
+
+.ButtonEnter{
+  align-self: flex-end;
+  margin-top: 20px;
+}
 
 /* KEYFRAMES */
 
