@@ -119,7 +119,7 @@ const Panier = () => {
       </div>
     <div className="total">
       <H2>TOTAL : {total}$</H2>
-      <Button text={'CHECKOUT'} handleClick={handleCheckoutClick} />
+      <Button text='CHECKOUT' handleClick={handleCheckoutClick} />
     </div>
     </div>
     </section>
