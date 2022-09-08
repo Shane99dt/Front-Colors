@@ -56,7 +56,7 @@ const Commandes = () => {
   return (
     <>
       <div className="commandetitle-container">
-        <H1>THANKS YOU FOR YOUR PURCHASE!</H1>
+        <H1>THANK YOU FOR YOUR PURCHASE!</H1>
         <H3>Summary of your order</H3>
       </div>
       <div className="jcc">

@@ -3,6 +3,7 @@
 import Header from "../components/Header";
 import CompleteCard from "../components/CompleteCard";
 import Loader from "../components/Loader";
+import Confirm from "../components/Confirm";
 
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -19,7 +20,16 @@ const Article = () => {
       ? JSON.parse(localStorage.getItem("articlesID")).length
       : 0
   );
+
   const [product, setProduct] = useState(null);
+  const [modale, setModale] = useState("none");
+
+  const Added = () => {
+    setModale("display");
+    setTimeout(() => {
+      setModale("none");
+    }, 2000);
+  };
 
   const fetchProducts = async () => {
     const request = await fetch(
@@ -44,11 +54,14 @@ const Article = () => {
     const stringifiedArticlesIds = JSON.stringify(Ids);
     localStorage.setItem("articlesID", stringifiedArticlesIds);
     setCartQuantity(Ids.length);
+
+    Added();
   };
 
   return (
     <>
       <Header length={cartQuantity} />
+      <Confirm ModalName={modale} />
       {product ? (
         <CompleteCard
           image={product.productImage}

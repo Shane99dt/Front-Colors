@@ -157,6 +157,9 @@
 }
 
 @media (max-width: 410px) {
+  .category-button{
+    flex-wrap: wrap;
+  }
   .Article-container{
     padding: 0PX 20px;
   }

@@ -439,13 +439,15 @@ button:disabled:hover{
 }
 
 .ConfirmText{
-  position: absolute;
+  position: fixed;
   top: 20%;
   right: 0;
-  padding: 10px;
+  padding: 20px;
   font-size: 16px;
-  color: white;
+  color: rgb(130, 213, 130);
   background: #966363;
+  transition: 0.6s;
+  border-radius: 3px;
 }
 
 .none{
