@@ -149,6 +149,8 @@ p{
   flex-direction: column;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  animation: apparition 1s 0s forwards; 
 }
 
 .home-container h1{
@@ -168,6 +170,8 @@ p{
   left: 0%;
   display: flex;
   justify-content:space-around;
+  opacity: 0;
+  animation: apparition 2s 1.4s forwards; 
 }
 .home-images div{
   height: 90%;
@@ -376,3 +380,16 @@ p{
 .retourbutton{
   margin: 16px;
 }
+
+/* KEYFRAMES */
+
+
+@keyframes apparition {
+  
+  100%{
+      opacity: 1;
+  }
+
+}
+
+

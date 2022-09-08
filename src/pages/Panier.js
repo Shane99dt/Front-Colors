@@ -98,7 +98,7 @@ const Panier = () => {
       </div>
     <div className="total">
       <H2>TOTAL : {totalPrice}$</H2>
-      <Button text={'Commander'} handleClick={() => handleNavigate('/Commandes')} />
+      <Button text={'CHECKOUT'} handleClick={() => handleNavigate('/Commandes')} />
     </div>
     </div>
     </section>
