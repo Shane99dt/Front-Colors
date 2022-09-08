@@ -75,6 +75,15 @@ const Panier = () => {
 
   const handleCheckoutClick = () =>{
     // post à faire
+    const articlesID = articles.map(article=>{
+      return article.id
+    })
+
+    console.log(articlesID);
+    // const commande = {
+    //   articles,
+    // }
+
     handleNavigate("/Commandes")
   }
 

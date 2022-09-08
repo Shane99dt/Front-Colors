@@ -1,5 +1,5 @@
-import H1 from "../components/H1"
-import Button from "../components/Button"
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import Header from "../components/Header"
 import CompleteCard from "../components/CompleteCard"
 
@@ -21,7 +21,6 @@ const Article = () =>{
         const request = await fetch(`https://e-commerce-fantastic4.herokuapp.com/products/${id}`)
         const response = await request.json()
         setProduct(response)
-        console.log(response)
     }
 
     const handleAddClick = (id) =>{
