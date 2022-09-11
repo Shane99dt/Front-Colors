@@ -111,6 +111,10 @@ button:hover{
   text-decoration: none;
   cursor: pointer;
   font-size: 20px;
+  transition: 0.4s;
+}
+.navbar div a:hover{
+  color: #966363;
 }
 
 h1,h2{
@@ -175,7 +179,7 @@ p{
   display: flex;
   justify-content:space-around;
   opacity: 0;
-  animation: apparition 1.5s 1s forwards; 
+  animation: apparition 1.5s 0.6s forwards; 
 }
 .home-images div{
   height: 90%;
@@ -233,7 +237,7 @@ p{
 
 .title-container{
   height: 70vh;
-  margin: 70px 50px ;
+  margin: 30px 50px ;
   background: url('../img/Rectangle\ 48.png') bottom no-repeat;
   background-size: cover;
   display: flex;
@@ -271,7 +275,7 @@ p{
   gap: 70px;
   margin-bottom: 60px;
   opacity: 0;
-  animation: apparition 1.7s 0s forwards; 
+  animation: apparition 1s 0s forwards; 
 }
 
 .Article-container h2{
@@ -444,12 +448,13 @@ button:disabled:hover{
   right: 0;
   padding: 20px;
   font-size: 16px;
-  color: rgb(130, 213, 130);
+  color: white;
   background: #966363;
   transition: 0.6s;
   border-radius: 3px;
   z-index: 3;
   pointer-events: none;
+  margin-right: 10px;
 }
 
 .none{
