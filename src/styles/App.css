@@ -74,7 +74,7 @@ button{
 button:hover{
   background: white;
   color: #966363;
-  letter-spacing: 0.13rem;
+  box-shadow: 3px 3px 0px #9663639b;
 }
 
 .category-button{
