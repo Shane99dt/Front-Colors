@@ -25,36 +25,31 @@ const Categorie = () => {
   };
 
   const fetchProducts = async (trie) => {
-    let request
-    if (trie){
-    request = await fetch(
-        `https://e-commerce-fantastic4.herokuapp.com/category/${params.id}?price=${trie}`
+    let request;
+    if (trie) {
+      request = await fetch(
+        `http://localhost:5000/category/${params.id}?price=${trie}`
       );
-    }else{
-    request = await fetch(
-        `https://e-commerce-fantastic4.herokuapp.com/category/${params.id}`
-      );
+    } else {
+      request = await fetch(`http://localhost:5000/category/${params.id}`);
     }
     const response = await request.json();
     setProduct(response.Products);
   };
 
   const fetchCategories = async () => {
-    const request = await fetch(
-      "https://e-commerce-fantastic4.herokuapp.com/category"
-    );
+    const request = await fetch("http://localhost:5000/category");
     const response = await request.json();
     setCatergories(response);
   };
 
-  const Orderby = e =>{
-    if(e){
-      fetchProducts(e.target.value)
-    }else{
-      fetchProducts()
-
+  const Orderby = (e) => {
+    if (e) {
+      fetchProducts(e.target.value);
+    } else {
+      fetchProducts();
     }
-  }
+  };
 
   return (
     <>
@@ -82,10 +77,14 @@ const Categorie = () => {
       </div>
       <div className="flex center">
         <Select
-          options={[{value: "", text: "do not sort"},{value: "ASC", text: "price, low to high"},{value: "DESC", text: "price, high to low"}]}
+          options={[
+            { value: "", text: "do not sort" },
+            { value: "ASC", text: "price, low to high" },
+            { value: "DESC", text: "price, high to low" },
+          ]}
           value=""
           handleChange={Orderby}
-          />
+        />
       </div>
       <section className="articles-container">
         {products.map((product) => {

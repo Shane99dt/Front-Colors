@@ -24,22 +24,16 @@ const Articles = () => {
   const fetchProducts = async (trie) => {
     let request;
     if (trie) {
-      request = await fetch(
-        `https://e-commerce-fantastic4.herokuapp.com/products?price=${trie}`
-      );
+      request = await fetch(`http://localhost:5000/products?price=${trie}`);
     } else {
-      request = await fetch(
-        "https://e-commerce-fantastic4.herokuapp.com/products"
-      );
+      request = await fetch("http://localhost:5000/products");
     }
     const response = await request.json();
     setProduct(response);
   };
 
   const fetchCategories = async () => {
-    const request = await fetch(
-      "https://e-commerce-fantastic4.herokuapp.com/category"
-    );
+    const request = await fetch("http://localhost:5000/category");
     const response = await request.json();
     setCatergories(response);
   };

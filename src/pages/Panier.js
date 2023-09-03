@@ -7,12 +7,8 @@ import CompleteCard from "../components/CompleteCard";
 import H2 from "../components/H2";
 import "../styles/MediaQuery.css";
 import { useNavigate } from "react-router-dom";
-// import Loader from "../components/Loader"
-
 
 import { useState, useEffect } from "react";
-
-
 
 const Panier = () => {
   const [cartQuantity, setCartQuantity] = useState(
@@ -21,22 +17,21 @@ const Panier = () => {
       : 0
   );
   const [articles, setArticles] = useState([]);
-  const [total,setTotal] = useState(0)
+  const [total, setTotal] = useState(0);
 
-  
-  useEffect(()=>{
-      let total=0
-      articles.forEach(article=>{
-          total += article.price
-        })
-        setTotal(total/100);
-    },[articles])
-    
-    const navigate = useNavigate();
+  useEffect(() => {
+    let total = 0;
+    articles.forEach((article) => {
+      total += article.price;
+    });
+    setTotal(total / 100);
+  }, [articles]);
 
-    const handleNavigate = (id) => {
-        navigate(`${id}`);
-      };
+  const navigate = useNavigate();
+
+  const handleNavigate = (id) => {
+    navigate(`${id}`);
+  };
 
   const handleRemoveClick = (id) => {
     const localArticlesIds = localStorage.getItem("articlesID");
@@ -67,61 +62,63 @@ const Panier = () => {
   };
 
   const fetchArticle = async (id) => {
-    const request = await fetch(
-      `https://e-commerce-fantastic4.herokuapp.com/products/${id}`
-    );
+    const request = await fetch(`http://localhost:5000/products/${id}`);
     const response = await request.json();
     return response;
   };
 
-  const handleCheckoutClick = async() =>{
-    const productsIds = articles.map(article=>{
-      return article.id
-    })
+  const handleCheckoutClick = async () => {
+    const productsIds = articles.map((article) => {
+      return article.id;
+    });
     const commande = {
       productsIds,
-      total
-    }
+      total,
+    };
 
-    await fetch("https://e-commerce-fantastic4.herokuapp.com/orders",{
-      method: 'POST',
-      headers:{
-        'Content-Type': 'application/json'
+    await fetch("http://localhost:5000/orders", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(commande)
-    })
+      body: JSON.stringify(commande),
+    });
 
-    handleNavigate("/Commandes")
-  }
+    handleNavigate("/Commandes");
+  };
 
   return (
     <section className="cart-container">
       <Header length={cartQuantity} />
       <H1>Cart</H1>
-    <div className="cart">
-    <div className="cart-list">
-      {articles.map((article) => {
-        return (
-          <CompleteCard
-            key={article.productName}
-            image={article.productImage}
-            title={article.productName}
-            price={article.price}
-            description={article.description}
-            owner={article.productOwner}
-            handleClick={() => handleRemoveClick(article.id)}
-            text="Remove from Cart"
-            className={"panier-container"}
-            button
+      <div className="cart">
+        <div className="cart-list">
+          {articles.map((article) => {
+            return (
+              <CompleteCard
+                key={article.productName}
+                image={article.productImage}
+                title={article.productName}
+                price={article.price}
+                description={article.description}
+                owner={article.productOwner}
+                handleClick={() => handleRemoveClick(article.id)}
+                text="Remove from Cart"
+                className={"panier-container"}
+                button
+              />
+            );
+          })}
+        </div>
+        <div className="total">
+          <H2>TOTAL : {total}$</H2>
+          <Button
+            text="CHECKOUT"
+            handleClick={handleCheckoutClick}
+            disabled={!cartQuantity > 0}
           />
-        );
-      })}
+        </div>
       </div>
-    <div className="total">
-      <H2>TOTAL : {total}$</H2>
-      <Button text='CHECKOUT' handleClick={handleCheckoutClick} disabled={!cartQuantity>0}/>
-    </div>
-    </div>
     </section>
   );
 };

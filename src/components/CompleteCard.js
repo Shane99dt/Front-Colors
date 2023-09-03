@@ -11,7 +11,7 @@ const CompleteCard = ({
   owner,
   text,
   className,
-  button
+  button,
 }) => {
   return (
     <article className={`flex ${className}`}>

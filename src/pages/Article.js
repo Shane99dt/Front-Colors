@@ -22,19 +22,17 @@ const Article = () => {
   );
 
   const [product, setProduct] = useState(null);
-  const [modale, setModale] = useState("none");
+  const [model, setModel] = useState("none");
 
   const Added = () => {
-    setModale("display");
+    setModel("display");
     setTimeout(() => {
-      setModale("none");
+      setModel("none");
     }, 2000);
   };
 
   const fetchProducts = async () => {
-    const request = await fetch(
-      `https://e-commerce-fantastic4.herokuapp.com/products/${id}`
-    );
+    const request = await fetch(`http://localhost:5000/products/${id}`);
     const response = await request.json();
     setProduct(response);
   };
@@ -61,7 +59,7 @@ const Article = () => {
   return (
     <>
       <Header length={cartQuantity} />
-      <Confirm ModalName={modale} />
+      <Confirm ModalName={model} />
       {product ? (
         <CompleteCard
           image={product.productImage}

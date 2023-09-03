@@ -160,7 +160,7 @@ p{
   display: flex;
   justify-content: center;
   opacity: 0;
-  animation: apparition 1s 0s forwards; 
+  animation: apparition 1s 0s forwards;
 }
 
 .home-container h1{
@@ -181,7 +181,7 @@ p{
   display: flex;
   justify-content:space-around;
   opacity: 0;
-  animation: apparition 1.5s 0.6s forwards; 
+  animation: apparition 1.5s 0.6s forwards;
 }
 .home-images div{
   height: 90%;
@@ -250,7 +250,7 @@ p{
   align-items: flex-end;
   padding: 30px;
   opacity: 0;
-  animation: apparition 1s 0.3s forwards; 
+  animation: apparition 1s 0.3s forwards;
 }
 
 .title-container h1{
@@ -281,7 +281,7 @@ p{
   gap: 70px;
   margin-bottom: 60px;
   opacity: 0;
-  animation: apparition 1s 0s forwards; 
+  animation: apparition 1s 0s forwards;
 }
 
 .Article-container h2{

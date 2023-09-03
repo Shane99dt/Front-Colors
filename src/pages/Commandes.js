@@ -46,9 +46,7 @@ const Commandes = () => {
   };
 
   const fetchArticle = async (id) => {
-    const request = await fetch(
-      `https://e-commerce-fantastic4.herokuapp.com/products/${id}`
-    );
+    const request = await fetch(`http://localhost:5000/products/${id}`);
     const response = await request.json();
     return response;
   };
