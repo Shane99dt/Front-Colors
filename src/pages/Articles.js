@@ -7,7 +7,7 @@ import Button from "../components/Button";
 import Select from "../components/Select";
 
 const Articles = () => {
-  const [products, setProduct] = useState([]);
+  const [products, setProducts] = useState([]);
   const [categories, setCatergories] = useState([]);
 
   const navigate = useNavigate();
@@ -29,7 +29,7 @@ const Articles = () => {
       request = await fetch("http://localhost:5000/products");
     }
     const response = await request.json();
-    setProduct(response);
+    setProducts(response);
   };
 
   const fetchCategories = async () => {
